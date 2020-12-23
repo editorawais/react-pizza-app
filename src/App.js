@@ -3,8 +3,7 @@ import Header from './Header';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Customize from "./Customize";
 import Checkout from './Checkout';
@@ -23,13 +22,13 @@ function App() {
   return (
     <>
     <Header />
-    <Router>
+    <Router basename="/react-pizza-app">
     <Switch>
           <Route exact path="/">
             <Customize ingredients = {ingredients} setIngredients={setIngredients} />
           </Route>
+          
           <Route path="/checkout">
-          {/* <h1>Checkout</h1> */}
           <Checkout ingredients = {ingredients} />
           </Route>
         </Switch>
@@ -37,6 +36,6 @@ function App() {
     </>
     
   );
-}
+};
 
 export default App;

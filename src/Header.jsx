@@ -11,7 +11,7 @@ const Header = () => {
             color: "yellow",
             fontFamily: "Alata,sans-serif"}}>Pizza Customization</div>
         </div>
-    )
-};
+    );
+}
 
 export default Header;
